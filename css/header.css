@@ -1,7 +1,7 @@
 #header {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 5rem;
+    padding: 2rem 5rem;
 }
 
 #header h2 {
@@ -9,25 +9,25 @@
 }
 
 #header ul {
-    list-style: nones;
-    font-size: 1.8rem;
+    list-style: none;
+    font-size: 1.6rem;
+
     display: flex;
     gap: 1rem;
 }
 
 #header ul li {
-    background-color: rgba(255, 255, 255, 0.516);
+    background-color: rgb(210, 210, 210);
     padding: 1rem 2rem;
     border-radius: 3px;
     cursor: pointer;
 }
 
 #header ul li:hover {
-    background-color: rgba(240, 248, 255, 0.353);
+    background-color: rgb(113, 113, 113);
     color: white;
     transition: 0.3s;
 }
-
 
 @media screen and (max-width:800px) {
     #header {
@@ -43,5 +43,11 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(auto, 1fr);
         gap: 1rem;
+    }
+}
+
+@media screen and (max-width:380px) {
+    #header ul {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

@@ -1,14 +1,14 @@
-let header_DOM = document.querySelector("#header");
+let header_DOM = document.querySelector("#header")
 
-let header_componente = 
-`
-    <h2> Tecnico Byron </h2>
+let header_componente = `
+    <h2>🪛 Técnico CR7</h2>
     <ul>
-        <li>titulo </li>
-        <li>titulo </li>
-        <li>titulo </li>
-        <li>titulo </li>
+        <li>título 1</li>
+        <li>título 2</li>
+        <li>título 3</li>
+        <li>título 4</li>
     </ul>
 `;
 
-header_DOM.innerHTML=header_componente;
+
+header_DOM.innerHTML = header_componente;

@@ -18,7 +18,8 @@ data.forEach((cada_item, index) => {
 
     // Agrega un evento de clic al ítem
     item.addEventListener('click', () => {
-        showDescripcion(index); // Pasamos el índice del ítem al que se hizo clic
+        hideAllItems();        // Ocultamos todos los ítems
+        showDescripcion(index); // Muestra la descripción basada en el ítem seleccionado
     });
 
     main_DOM.appendChild(item);
@@ -49,4 +50,11 @@ function showDescripcion(index) {
     titleDOM.textContent = itemData.titulo;
     descDOM.textContent = itemData.descripcion;
     descripcionDOM.style.display = 'flex';   
+}
+
+function hideAllItems() {
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => {
+        item.style.display = 'none';
+    });
 }

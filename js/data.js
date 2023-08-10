@@ -17,7 +17,7 @@ export let data = [
     },
     {
         titulo: "Instalación de disco duro",
-        img : " ",
+        img : "https://okdiario.com/img/2019/01/20/cambiar-un-disco-duro.jpg",
         descripcion : "Proceso para instalar un nuevo disco duro en tu computadora",
         herramientas : [
             "Destornillador de estrella",
@@ -34,7 +34,7 @@ export let data = [
     },
     {
         titulo: "Instalación de tarjeta de video",
-        img : " ",
+        img : "https://es.digitaltrends.com/wp-content/uploads/2019/05/installgpu02.jpg?fit=500%2C334&p=1",
         descripcion : "Pasos para instalar una tarjeta de video",
         herramientas : [
             "Destornillador de estrella",
@@ -51,7 +51,7 @@ export let data = [
     },
     {
         titulo: "Cambio de fuente de poder",
-        img : " ",
+        img : "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2012/10/3975-montar-fuente-alimentacion.jpg?tf=3840x",
         descripcion : "Como cambiar la fuente de poder de tu computadora",
         herramientas : [
             "Destornillador de estrella",
@@ -68,7 +68,7 @@ export let data = [
     },
     {
         titulo: "Instalación de tarjeta madre",
-        img : " ",
+        img : "https://es.digitaltrends.com/wp-content/uploads/2019/10/installmotherboard01.jpg?p=1",
         descripcion : "Pasos para instalar una nueva tarjeta madre",
         herramientas : [
             "Destornillador de estrella",
@@ -85,7 +85,7 @@ export let data = [
     },
     {
         titulo: "Instalación de RAM",
-        img : " ",
+        img : "https://www.digitaltoo.com/wp-content/uploads/sites/3/2021/04/Cambiar-memoria-RAM-1-1080x770.jpg",
         descripcion : "Como instalar memoria RAM en tu computadora",
         herramientas : [
             "Memoria RAM"
@@ -100,7 +100,7 @@ export let data = [
     },
     {
         titulo: "Limpieza de ventiladores",
-        img : " ",
+        img : "https://thumbs.dreamstime.com/b/servicio-de-limpieza-pc-desde-el-polvo-dentro-del-equipo-limpiar-sobremesa-con-aire-comprimido-foto-alta-calidad-272031800.jpg",
         descripcion : "Como limpiar los ventiladores de tu computadora para mejorar su rendimiento",
         herramientas : [
             "Aire comprimido",

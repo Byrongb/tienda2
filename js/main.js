@@ -7,40 +7,61 @@ data.forEach((cada_item, index) => {
     let item = document.createElement("div");
     item.className = "item";
 
+    let shortDescription = getShortDescription(cada_item.descripcion);
+    
     item.innerHTML = `
         <div class="caja_img">
             <img src="${cada_item.img}"/>
         </div>
         <h2>${cada_item.titulo}</h2>
-        <p>${cada_item.descripcion}</p>
+        <p class="item-desc">${shortDescription}</p>
         <span>Q100.00</span>
     `;
 
     // Agrega un evento de clic al ítem
     item.addEventListener('click', () => {
-        hideAllItems();        // Ocultamos todos los ítems
-        showDescripcion(index); // Muestra la descripción basada en el ítem seleccionado
+        hideAllItems();
+        showDescripcion(index);
+    });
+
+    // Agrega un evento de clic al "leer más" para expandir la descripción
+    item.querySelector('.read-more').addEventListener('click', function(e) {
+        e.stopPropagation();
+        this.previousSibling.textContent = cada_item.descripcion;
+        this.style.display = 'none';
     });
 
     main_DOM.appendChild(item);
 });
 
+function getShortDescription(description) {
+    let words = description.split(' ');
+    let shortDescription = words.slice(0, 10).join(' ');
+    return shortDescription + '<span class="read-more" style="color: blue; cursor: pointer;"> leer más...</span>';
+}
+
 function showDescripcion(index) {
     const itemData = data[index];
     
-    // Selecciona el DOM de la descripción
     const descripcionDOM = document.querySelector('#descripcion');
     const imgDOM = descripcionDOM.querySelector('.featured-img img');
     const titleDOM = descripcionDOM.querySelector('.featured-info h2');
     const descDOM = descripcionDOM.querySelector('.featured-info p');
-    const priceDOMs = descripcionDOM.querySelectorAll('.price');
     const materialsListDOM = descripcionDOM.querySelector('.materials-list');
+    const diyButton = document.createElement('button');
+    diyButton.textContent = 'Hágalo usted mismo';
+    diyButton.classList.add('diy-button');
+    diyButton.style.display = 'block';
 
-    // Actualiza el contenido de #descripcion con la información del ítem seleccionado
+    const servicesWithDIY = ["Cambio de pasta termica", "Instalación de disco duro", "Instalación de RAM", "Limpieza de ventiladores"];
+    
+    if (servicesWithDIY.includes(itemData.titulo)) {
+        const shareButton = descripcionDOM.querySelector('.share');
+        shareButton.after(diyButton);
+    }
+
     materialsListDOM.innerHTML = '';
-
-     // Itera sobre las herramientas del ítem seleccionado y las agrega a la lista
-     itemData.herramientas.forEach(material => {
+    itemData.herramientas.forEach(material => {
         const li = document.createElement('li');
         li.textContent = material;
         materialsListDOM.appendChild(li);

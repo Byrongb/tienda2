@@ -1,7 +1,7 @@
 export let data = [
     {
         titulo: "Cambio de pasta termica",
-        img : "https://th.bing.com/th/id/OIP.w2ngmOd8SPdGE_IM5puYhAHaHa?pid=ImgDet&rs=1",
+        img : "https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/01/pasta-termica-procesador-2588109.jpg?tf=3840x",
         descripcion : "Cambiar la pasta térmica es esencial para mantener la temperatura óptima del procesador. Hacerlo usted mismo puede ahorrarle dinero y garantizar que se use una pasta de alta calidad.",
         herramientas : [
             "Destornillador de estrella",

@@ -27,8 +27,8 @@ data.forEach((cada_item, index) => {
     // Agrega un evento de clic al "leer más" para expandir la descripción
     item.querySelector('.read-more').addEventListener('click', function(e) {
         e.stopPropagation();
-        this.previousSibling.textContent = cada_item.descripcion;
-        this.style.display = 'none';
+        hideAllItems();
+        showDescripcion(index);
     });
 
     main_DOM.appendChild(item);
